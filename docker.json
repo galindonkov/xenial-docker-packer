@@ -1,0 +1,28 @@
+{
+ "builders": [
+        {
+            "type": "docker",
+            "image": "ubuntu:xenial",
+            "commit": true,
+            "changes": [
+                "EXPOSE 80",
+                "CMD [\"nginx\", \"-g\", \"daemon off;\"]"
+            ]
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "scripts/install_nginx.sh"
+        }
+    ],
+    "post-processors": [
+        [
+            {
+                "type": "docker-tag",
+                "repository": "nginx",
+                "tag": "0.0.1"
+            }
+        ]
+    ]
+ }
