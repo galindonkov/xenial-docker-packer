@@ -33,7 +33,7 @@ Build a Docker Image that has ```nginx``` installed
 
 ```vagrant@ubuntu-xenial:~$ docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
-nginx               0.0.1               0af130b61162        Time               in MB
+nginx               0.0.1               0af130b61162        About an hour ago   209 MB
 ```
 
 
