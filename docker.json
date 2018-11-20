@@ -13,7 +13,7 @@
     "provisioners": [
         {
             "type": "shell",
-            "script": "scripts/install_nginx.sh"
+            "script": "docker-scripts/install-nginx.sh"
         }
     ],
     "post-processors": [
