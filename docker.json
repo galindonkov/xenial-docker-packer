@@ -3,11 +3,7 @@
         {
             "type": "docker",
             "image": "ubuntu:xenial",
-            "commit": true,
-            "changes": [
-                "EXPOSE 80",
-                "CMD [\"nginx\", \"-g\", \"daemon off;\"]"
-            ]
+            "commit": true
         }
     ],
     "provisioners": [
