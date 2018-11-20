@@ -24,17 +24,19 @@ Build a Docker Image that has ```nginx``` installed
 
 - The next step is to ssh into the running Vagrant machine and and get access to its shell by : ```vagrant ssh```
        You should see the command prompt ```vagrant@ubuntu-xenial:~$```
-- Make e new directory called ```scripts``` by :  ```mkdir scripts``` and get into it by ```cd scripts/```
-    Create a file and open it by ```vi install_nginx.sh```, mark the following text and copy it by ```CTRL+C```
-    ```#!/usr/bin/env bash
-       #Install curl and nginx
-        apt-get update
-        apt-get install -y curl
-        apt-get install -y nginx
-    ```
-    Go back to the window with the opened ```install_nginx.sh``` file, type ```a``` and then ```CTRL+V```, then type ```Esc``` key -> ```:wq``` and hit ```Enter```. Go back to the previous directory ```cd ..```
-  
- - Create a file ```template.json``` and open it by ```vi template.json``` 
 
+- Change into directory vagrant by ```cd /vagrant```
+
+- Execute ```packer build docker.json``` to get required docker image created.Once the process finished validate the docker image creation by : ```docker images``` and if the output is smillar to following then we have succesfully created a required docker image :
+
+```vagrant@ubuntu-xenial:~$ docker images
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               0.0.1               random digits        Time               in MB
+```
+
+
+### TO DO
+
+Push nginx Docker image to Docker hub (docker hub)
 
 
