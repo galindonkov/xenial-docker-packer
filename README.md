@@ -11,6 +11,8 @@ Build a Docker Image that has ```nginx``` installed
 
 - File ```script/provision.sh``` :  a script that installs ```packer``` and ```docker``` on the Vagrant box. 
 - File ```template.json``` : a JSON file that configure the various components of Packer in order to create required machine images
+- File ```docker-scripts/install-nginx.sh``` : a script that installs ```curl``` and ```nginx``` on the docker image
+- File ```docker.json``` : a JSON file that configure the various components of Packer in order to create required Docker image
 
 ### How to use the repo
 
