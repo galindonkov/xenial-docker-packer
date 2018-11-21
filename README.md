@@ -45,15 +45,23 @@ nginx               0.0.1               0af130b61162        About an hour ago   
 
 - You already have the repo, then go back to the terminal and type : ```docker images```
 ```vagrant@ubuntu-xenial:~$ docker images
-REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
-galindonkov/nginx64   2018.11.21          1727c224629e        24 minutes ago      209 MB
-ubuntu                xenial              a51debf7e1eb        40 hours ago        116 MB
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+nginx               0.0.1               0af130b61162        About an hour ago   209 MB
 ```
+- Let's create a tag first by : ```docker tag 1727c224629e your-hub-username/nginx64:2018.11.21```
 
-- We are going to upload the fisrt image with image ID ```1727c224629e```
+- Check the images again : ```docker images```
+```
+REPOSITORY              TAG                 IMAGE ID            CREATED             SIZE
+your-hub-user/nginx64   11.21.2018          1727c224629e        24 minutes ago      209 MB
+nginx                   0.0.1               1727c224629e        14 minutes ago      209 MB
+```
+- We are going to upload the fisrt image ```your-hub-user/nginx64```
 
-- Login the the docker hub by : ```docker login``` : use the accunt you previously created.
+- Login the the docker hub by : ```docker login``` and use the accunt you previously created once requested.
 
-- Push the image by : ```docker push docker-username/nginx64
+- Push the image by : ```docker push your-hub-user/nginx64:11.21.2018```
+
+- The image is succesfully uploaded once you see it on the Docker hub as a new tag.
     
 
