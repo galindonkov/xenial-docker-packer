@@ -37,8 +37,23 @@ nginx               0.0.1               0af130b61162        About an hour ago   
 ```
 
 
-### TO DO
+### How to push the nginx Docker image to Docker hub
 
-Push nginx Docker image to Docker hub (docker hub)
+- First, you must create an account to the Docker hub and a repository with a name ```nginx64``` : [create docker hub account](https://hub.docker.com/)
 
+- Once you have an account, login with it and create the ```public``` repository : [create a repo](https://www.thegeekdiary.com/how-to-create-a-public-private-repository-in-docker-hub-and-connect-it-remotely-using-command-line/)
+
+- You already have the repo, then go back to the terminal and type : ```docker images```
+```vagrant@ubuntu-xenial:~$ docker images
+REPOSITORY            TAG                 IMAGE ID            CREATED             SIZE
+galindonkov/nginx64   2018.11.21          1727c224629e        24 minutes ago      209 MB
+ubuntu                xenial              a51debf7e1eb        40 hours ago        116 MB
+```
+
+- We are going to upload the fisrt image with image ID ```1727c224629e```
+
+- Login the the docker hub by : ```docker login``` : use the accunt you previously created.
+
+- Push the image by : ```docker push docker-username/nginx64
+    
 
