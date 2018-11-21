@@ -16,8 +16,8 @@
         [
             {
                 "type": "docker-tag",
-                "repository": "nginx",
-                "tag": "0.0.1"
+                "repository": "galindonkov/nginx64",
+                "tag": "2018.11.21"
             }
         ]
     ]
