@@ -65,6 +65,33 @@ nginx                   0.0.1               1727c224629e        14 minutes ago  
 - The image is succesfully uploaded once you see it on the Docker hub as a new tag.
     
 
-###TO DO
+### Installation prerequisites needed on the vagrant box - tested on Ubuntu OS
 
-use kitchen-docker to test the docker box - ie nginx is installed
+- Install ```ruby-dev , ruby-build``` by : ```apt-get install -y ruby-dev ruby-build```
+
+- Modify you profile and the reload it by : ```echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile``` 
+     ```source ~/.bash_profile```
+     
+- Set up rbenv in your shell by : ```rbenv init```
+
+- Install ruby by : ```rbenv install 2.3.1```
+
+- Select the ruby version for the project by : ```rbenv local 2.3.1```
+
+- Ensure the target version : ```rbenv versions```
+
+- Once you've installed some Ruby versions, you'll want to install gems : ```gem install bundler```
+
+- Install all of the required gems by : ```bundle install```
+
+### Perform kitchen test
+
+- While connected to the vagrant box, go into vagrant directory by : ```cd /vagrant```
+
+- List kitchen environments if any : ```bundle exec kitchen list```
+
+- Build new kitchen environment : ```bundle exec kitchen converge```
+
+- Run the kitchen test by : ```bundle exec kitchen verify```
+
+- After the test passed successfully you ca destroy the created environment by : ```bundle exec kitchen destroy```
