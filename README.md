@@ -48,7 +48,7 @@ nginx               0.0.1               0af130b61162        About an hour ago   
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 nginx               0.0.1               0af130b61162        About an hour ago   209 MB
 ```
-- Let's create a tag first by : ```docker tag 1727c224629e your-hub-username/nginx64:2018.11.21```
+- Let's create a tag first by : ```docker tag nginx:0.0.1 your-hub-username/nginx64:2018.11.21```
 
 - Check the images again : ```docker images```
 ```
@@ -74,9 +74,9 @@ nginx                   0.0.1               1727c224629e        14 minutes ago  
      
 - Set up rbenv in your shell by : ```rbenv init```
 
-- Install ruby by : ```rbenv install 2.3.1```
+- Install ruby by : ```rbenv install 2.2.3```
 
-- Select the ruby version for the project by : ```rbenv local 2.3.1```
+- Select the ruby version for the project by : ```rbenv local 2.2.3```
 
 - Ensure the target version : ```rbenv versions```
 
