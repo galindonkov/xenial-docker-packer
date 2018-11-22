@@ -65,3 +65,6 @@ nginx                   0.0.1               1727c224629e        14 minutes ago  
 - The image is succesfully uploaded once you see it on the Docker hub as a new tag.
     
 
+###TO DO
+
+use kitchen-docker to test the docker box - ie nginx is installed
